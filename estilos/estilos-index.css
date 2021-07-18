@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+  }
+  .barra-superior {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 45px;
+    width: 100vw;
+    background-color: #ff3847;
+    position: fixed;
+  }
+  
+  .barra-superior a {
+    color: white;
+    margin-right: 30px;
+    font-weight: bolder;
+    font-family: 'Lucida Sans';
+  }
+.banner-principal img{
+  width: 100%;
+}

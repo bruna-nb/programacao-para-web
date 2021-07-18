@@ -1,4 +1,4 @@
-# programacao-para-web
+# FlexFlix
 ## Descrição do Projeto
 Este projeto está sendo desenvolvido durante a disciplina de Programação para Web do curso de Sistemas de Informação da Universidade Federal de Santa Catarina no semestre de 2021.1.
 
