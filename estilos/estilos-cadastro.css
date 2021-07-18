@@ -1,23 +1,93 @@
 a {
   text-decoration: none;
 }
+* {
+  box-sizing: border-box;
+}
 .barra-superior {
   display: flex;
   align-items: center;
   justify-content: flex-end;
   height: 54px;
-  width: 100vw;
-  background-color: black;
+  width: 100%;
+}
+
+.tema-padrao {
+  color: white;
+  background-color: #186196;
 }
 
 .barra-superior a {
   color: white;
+  font-weight: bold;
   margin-right: 15px;
 }
 
-.formulario-cadastro {
-  width: 600px;
-  height: 400px;
-  margin: 50px auto 0 auto;
-  background-color: black;
+.logo-desktop {
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: 130px;
+}
+
+.logo-mobile {
+  display: none;
+}
+
+.container-formulario {
+  width: 500px;
+  margin: 100px auto 0 auto;
+  border-radius: 10px;
+}
+
+.campos-formulario {
+  display: flex;
+  align-items: center;
+
+  margin: 0px 20px;
+}
+
+.coluna-formulario {
+  width: 250px;
+  margin-right: 10px;
+  margin-bottom: 15px;
+}
+.coluna-formulario div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  justify-content: space-between;
+}
+
+.coluna-formulario div input {
+  width: 130px;
+}
+
+.botao-formulario {
+  width: 100px;
+}
+
+@media (max-width: 600px) {
+  .container-formulario {
+    margin-top: 0;
+    width: 100%;
+  }
+  .logo-desktop {
+    display: none;
+  }
+
+  .logo-mobile {
+    display: inline;
+
+    width: 100%;
+  }
+  .campos-formulario {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column;
+  }
+  .coluna-formulario {
+    margin-bottom: 0px;
+  }
 }
