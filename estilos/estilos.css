@@ -4,3 +4,39 @@ body {
   font-family: "Roboto", sans-serif;
   background-color: #f6f6f6;
 }
+
+a {
+  text-decoration: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.tema-padrao {
+  color: white;
+  background-color: #186196;
+}
+
+.barra-superior {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.barra-superior a {
+  color: white;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+  .barra-superior {
+    justify-content: center;
+  }
+}

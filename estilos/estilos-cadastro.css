@@ -1,26 +1,5 @@
-a {
-  text-decoration: none;
-}
 * {
   box-sizing: border-box;
-}
-.barra-superior {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  height: 54px;
-  width: 100%;
-}
-
-.tema-padrao {
-  color: white;
-  background-color: #186196;
-}
-
-.barra-superior a {
-  color: white;
-  font-weight: bold;
-  margin-right: 15px;
 }
 
 .logo-desktop {
@@ -36,7 +15,7 @@ a {
 
 .container-formulario {
   width: 500px;
-  margin: 100px auto 0 auto;
+  margin: 140px auto 0 auto;
   border-radius: 10px;
 }
 
@@ -68,10 +47,15 @@ a {
 }
 
 @media (max-width: 600px) {
+  .barra-superior a:last-child {
+    margin: 0;
+  }
+
   .container-formulario {
     margin-top: 0;
     width: 100%;
   }
+
   .logo-desktop {
     display: none;
   }

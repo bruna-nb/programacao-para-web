@@ -1,31 +1,15 @@
 a {
-    text-decoration: none;
-  }
-  .barra-superior {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    height: 7vh;
-    width: 100vw;
-    background-color: #176196;
-    position: fixed;
-    border-bottom: 0.2vw solid #ff3847;
-  }
-  
-  .barra-superior a {
-    color: white;
-    margin-right: 2vw;
-    font-weight: bolder;
-  }
-body{
-  font-family: 'Lucida Sans';
+  text-decoration: none;
+}
+
+body {
   color: #176196;
   background-color: rgb(122, 173, 175);
 }
-.banner-principal img{
+.banner-principal img {
   width: 100vw;
 }
-.faq h1{
+.faq h1 {
   font-size: 80px;
   text-align: center;
   margin-top: 5vh;
@@ -34,23 +18,23 @@ body{
   display: flex;
   margin: 0vh 5vw;
 }
-.grupos-de-perguntas div{
+.grupos-de-perguntas div {
   margin-top: 5vh;
   padding: 5vh 5vw;
   width: 20vw;
   border-left: 0.08vw solid #176196;
   border-right: 0.08vw solid #176196;
 }
-.grupos-de-perguntas h2{
+.grupos-de-perguntas h2 {
   text-align: center;
   padding-bottom: 3vh;
   font-size: 40px;
   font-weight: bolder;
 }
-.grupos-de-perguntas summary{
+.grupos-de-perguntas summary {
   margin: 2vh 0vw;
   font-size: 18px;
 }
-.grupos-de-perguntas p{
+.grupos-de-perguntas p {
   margin-left: 3vw;
 }
