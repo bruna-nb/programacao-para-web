@@ -22,20 +22,51 @@
     </div>
         <div class="campos-formulario">
         <div class="coluna-formulario">
-        <div><label>Nome: </label><input type="text" placeholder="Nome"></div>
-        <div><label>Sobrenome: </label><input type="text" placeholder="Sobrenome"></div>
-        <div><label>Email: </label><input type="text" placeholder="email@email.com"></div>
-        <div><label>Telefone: </label><input type="text" placeholder="(xx) xxxxx-xxxx"></div>
+        <div>
+          <label>Nome: </label>
+          <input class="nome" type="text" placeholder="Nome">
+          <spam class="aviso"></spam>
+        </div>
+        <div>
+          <label>Sobrenome: </label>
+          <input class = "sobrenome"type="text" placeholder="Sobrenome">
+          <spam class="aviso"></spam>
+        </div>
+        <div>
+          <label>Email: </label>
+          <input class="email" type="text" placeholder="email@email.com">
+          <spam class="aviso"></spam>
+        </div>
+        <div>
+          <label>Telefone: </label>
+          <input class="telefone "type="text" placeholder="(xx) xxxxx-xxxx">
+          <spam class="aviso"></spam>
+        </div>
         </div>
         <div class="coluna-formulario">
-            <div><label>Senha: </label><input type="text" placeholder="Senha"></div>
-        <div><label>Repita a senha: </label><input type="text" placeholder="Repita a Senha"></div>
-        <div><button class="botao-formulario">Cancelar</button><button class="botao-formulario">Confirmar</button> </div>
-       
-            
+          <div>
+            <label>CPF: </label>
+            <input class ="cpf"type="text" placeholder="xxx.xxx.xxx-xx">
+            <spam class="aviso"></spam>
+          </div>
+            <div>
+              <label>Senha: </label>
+              <input class ="senha"type="password" placeholder="Senha">
+              <spam class="aviso"></spam>
+            </div>
+        <div>
+          <label>Repita a senha: </label>
+          <input class="confirma-senha"type="password" placeholder="Repita a Senha">
+          <spam class="aviso"></spam>
+        </div>
+        <div>
+          <button class="botao-formulario cancelar" >Cancelar</button>
+          <button class="botao-formulario enviar" >Confirmar</button> 
+        </div>
             </div>
     </div>
 </div>
     </div>
+    <script type="text/javascript" src="scripts/scriptCadastro.js"></script>
   </body>
 </html>
