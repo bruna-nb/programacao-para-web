@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <link rel="stylesheet" href="estilos/reset.css" />
+    <link rel="stylesheet" href="estilos/estilos.css" />
+    <link rel="stylesheet" href="estilos/estilos-cadastro.css" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | FlexFlix</title>
+</head>
+
+<body>
+    <div class="barra-superior tema-padrao">
+        <a href="">Meu perfil</a>
+        <a href="">Meus grupos</a>
+        <a href="index.html">Sair</a>
+
+    </div>
+
+    <div class="container-formulario tema-padrao">
+        <div class="logo-formulario">
+            <img class="logo-desktop" src="imagens/logo-horizontal.jpeg" />
+            <img class="logo-mobile" src="imagens/logo-quadrada.jpeg" />
+        </div>
+        <div class="campos-formulario">
+            <div class="coluna-formulario">
+                <div>
+                    <label for="idSelectPlataforma">Plataforma: </label>
+                    <select name="nmSelectPlataforma" id="idSelectPlataforma" class="clPlataforma">
+                        <option value="" selected disabled hidden>Selecione</option>
+                        <option value="001">Netflix</option>
+                        <option value="002">PrimeVideo</option>
+                        <option value="003">HBO go</option>
+                        <option value="004">Disney +</option>
+                        <option value="005">Spotify</option>
+                        <option value="006">Deezer</option>
+                    </select>
+                    <spam class="aviso"></spam>
+                </div>
+                <div>
+                    <label for="idNumeroVagas">Número de vagas: </label>
+                    <input class="clNumeroVagas" type="number" id="idNumeroVagas"
+                        title="Informe o número de vagas que deseja disponibilizar no grupo. Você ocupa uma.">
+                    <spam class="aviso"></spam>
+                </div>
+            </div>
+            <div class="coluna-formulario">
+                <div>
+                    <label>Valor da assinatura </label>
+                    <input class="valorAssinatura" type="number"
+                        title="Valor total da assinatura. O valor por membro será calculado mensalmente de acordo com o número de membros.">
+                    <spam class="aviso"></spam>
+                </div>
+                <div>
+                    <button class="botao-formulario cancelar">Cancelar</button>
+                    <button class="botao-formulario enviar">Criar Grupo</button>
+                </div>
+            </div>
+</body>
+
+</html>
