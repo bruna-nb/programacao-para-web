@@ -1,6 +1,7 @@
 const FORM = document.querySelector(".campos-formulario");
 const ENVIAR = document.querySelector(".enviar");
 const CANCELAR = document.querySelector(".cancelar");
+const URL = "localhost:3000";
 const inicio = () => (window.location.href = "index.html");
 CANCELAR.addEventListener("click", inicio);
 ENVIAR.addEventListener("click", validarCadastro);
@@ -155,7 +156,14 @@ function validarCadastro() {
       cpf: cpf,
       senha: senha,
     };
-    console.log(dados); //imprime o objeto no console, apagar depois
-    return dados;
+    cadastrarUsario(dados);
   }
+}
+
+function cadastrarUsario(body) {
+  const request = new XMLHttpRequest();
+  request.open("POST", URL, true);
+  //request.setRequestHeader("Content-type", "application/json");
+  request.send(JSON.stringify(body));
+  request.onload = () => console.log(this.responseText);
 }
