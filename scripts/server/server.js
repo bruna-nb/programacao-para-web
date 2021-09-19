@@ -1,10 +1,21 @@
 const express = require("express");
-
 const app = express();
+app.use(express.json());
+const cors = require("cors");
+app.use(cors());
+
+app.listen(3010 || process.env.PORT, () => console.log("Servidor UP!"));
 
 app.post("/usuario", (req, res) => {
-  console.log(req.params);
-  res.send("post grupo");
+  res.json({
+    msn: "Chegou na rota usuario - POST",
+    nome: req.body.nome,
+    sobrenome: req.body.sobrenome,
+    emaiç: req.body.email,
+    telefone: req.body.telefone,
+    cpf: req.body.cpf,
+    senha: req.body.senha,
+  });
 });
 
 app.get("/usuario", (req, res) => {
@@ -22,5 +33,3 @@ app.get("/grupo", (req, res) => {
 });
 
 app.delete("/grupo", (req, res) => {});
-
-app.listen(3000 || process.env.PORT, () => console.log("Servidor UP!"));
