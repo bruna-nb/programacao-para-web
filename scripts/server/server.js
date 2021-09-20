@@ -65,3 +65,9 @@ app.post("/grupo", (req, res) => {
     groupControler.insertGrupo(grupo);
   }
 });
+
+app.get("/grupo/:id", async function (req, res) {
+  console.log("chegou na rota GET GRUPO");
+  const grupo = await groupControler.selectGrupo(req.params.id);
+  res.json(grupo);
+});
