@@ -53,6 +53,17 @@
   color: gray;
 }
 
+.aviso{
+  text-align: center;
+  width: 100%;
+  color: red;
+  font-size: 11px
+}
+
+#idOut{
+  width: 100%
+}
+
 @media (max-width: 600px) {
   .container-login {
     margin-top: 0px;

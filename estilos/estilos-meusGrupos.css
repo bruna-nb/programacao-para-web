@@ -14,4 +14,9 @@
     font-size: 36px;
     font-weight: bold;
     margin-bottom: 40px;
+    margin-top: 80px;
+}
+
+.botao-grupo {
+    margin: 2px 5px;
 }
