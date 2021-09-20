@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 const userControler = require("../server/controlers/UserControler");
+const groupControler = require("../server/controlers/GrupoControler")
 
 const DB_URI =
   "mongodb+srv://leonardo_guzi:web123@flexflix.hf0tt.mongodb.net/flexFlix?retryWrites=true&w=majority";
@@ -32,7 +33,7 @@ app.post("/usuario", (req, res) => {
     req.body.cpf &&
     req.body.senha
   ) {
-    insertUser(req.body);
+    userControler.insertUser(req.body);
   }
 });
 
