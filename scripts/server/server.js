@@ -46,3 +46,22 @@ app.get("/usuarios/", async function (req, res) {
   const users = await userControler.getUsers();
   res.json(users);
 });
+
+app.post("/grupo", (req, res) => {
+  res.json({
+    msn: "Chegou na rota grupo - POST",
+  });
+  if (
+    req.body.plataforma &&
+    req.body.nVagas &&
+    req.body.valorTotal
+  ) {
+    let grupo = {
+      "plataforma": req.body.plataforma,
+      "nVagas": req.body.nVagas,
+      "valorTotal": req.body.valorTotal,
+      "integrantes": []
+    }
+    groupControler.insertGrupo(grupo);
+  }
+});
