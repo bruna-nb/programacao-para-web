@@ -161,9 +161,20 @@ function validarCadastro() {
 }
 
 function cadastrarUsario(body) {
-  const request = new XMLHttpRequest();
-  request.open("POST", URL, true);
-  //request.setRequestHeader("Content-type", "application/json");
-  request.send(JSON.stringify(body));
-  request.onload = () => console.log(this.responseText);
+  (async function () {
+    var options = {
+      method: "POST",
+      body: JSON.stringify(body),
+      headers: { "Content-Type": "application/json" },
+    };
+
+    var resposta = await fetch("http://localhost:3000/usuario", options);
+    console.log(await resposta.json());
+    redirect();
+  })();
+}
+
+function redirect() {
+  alert("Cadastrado com sucesso!!!");
+  window.location.href = "index.html";
 }
