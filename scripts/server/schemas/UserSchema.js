@@ -8,6 +8,7 @@ const UserSchema = new Schema({
   telefone: String,
   cpf: String,
   senha: String,
+  grupos: Array
 });
 
 module.exports = UserSchema;
