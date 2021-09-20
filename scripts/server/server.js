@@ -1,4 +1,5 @@
 const express = require("express");
+const grupoSchema = require("./grupoSchema.js")
 
 const app = express();
 
