@@ -24,3 +24,18 @@ exports.selectUser = async function (id) {
   const resp = await query;
   return resp;
 };
+
+exports.userPorEmail = async function(email){
+  const query = await mongooseModel.find({ email: email });
+  return query;
+}
+
+exports.updateUser = async function(query, data){
+  mongooseModel.updateMany(query, data, (err) => {
+    if(err){
+      console.log(err);
+    }else{
+      console.log("Usuário atualizado com sucesso");
+    }
+  })
+}
