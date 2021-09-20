@@ -1,29 +1,25 @@
 <!DOCTYPE html>
-<html lang="pt">
-
-<head>
+<html lang="pt-br">
+  <head>
     <link rel="stylesheet" href="estilos/reset.css" />
     <link rel="stylesheet" href="estilos/estilos.css" />
-    <link rel="stylesheet" href="estilos/estilos-meusGrupos.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home | FlexFlix</title>
-</head>
-
-<body>
-    <nav class="barra-superior tema-padrao">
-        <a href="cadastroGrupo.html">Criar novo Grupo</a>
-        <a href="index.html">Sair</a>
-    </nav>
-    <br><br><br><br>
-    <div class="row">
-        <h1 class="text-center titulo">Meus Grupos</h1>
-        <hr>
-        <div id="divGrupos" class="lista-grupos">
-
-        </div>
+    <link rel="stylesheet" href="estilos/estilos-meusGrupos.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Login | FlexFlix</title>
+  </head>
+  <body>
+    <div class="barra-superior tema-padrao">
+      <a href="cadastroGrupo.html">Criar Novo Grupo |</a>
+      <a href="index.html">Sair</a>
     </div>
-</body>
+    <div>
+        <h1 class= "text-center titulo">Meus Grupos</h1>
+        <hr>
+        <ol id="idGruposLista">
 
+        </ol>
+    </div>
+    <script src="scripts/scriptMeusGrupos.js"></script>
+  </body>
 </html>
