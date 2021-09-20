@@ -19,9 +19,12 @@
       </div>
       <div class="campos-login">
         <label>Email: </label
-        ><input type="text" placeholder="email@email.com" />
-        <label>Senha: </label><input type="text" placeholder="Senha" />
-        <button class="botao-formulario">Login</button>
+        ><input type="text" placeholder="email@email.com" id="idEmail" />
+        <label>Senha: </label><input type="text" placeholder="Senha" id="idSenha"/>
+        <div>
+          <output class="aviso" id="idOut"></output>
+        </div>
+        <button class="botao-formulario" type="button" id="btnLogin">Login</button>
         <a href="index.html"
           ><button class="botao-formulario">Voltar</button></a
         >
@@ -33,5 +36,6 @@
         para se cadastrar!
       </p>
     </div>
+  <script src="scripts/scriptLogin.js"></script>
   </body>
 </html>
