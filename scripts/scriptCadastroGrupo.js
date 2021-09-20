@@ -1,11 +1,12 @@
 const FORM = document.querySelector(".campos-formulario");
 const ENVIAR = document.querySelector(".enviar");
 const CANCELAR = document.querySelector(".cancelar");
-CANCELAR.addEventListener("click", home);
+CANCELAR.addEventListener("click", redirect);
 ENVIAR.addEventListener("click", validarCadastroGrupo);
 FORM.addEventListener("keyup", (event) =>
   event.key === "Enter" ? validarCadastro() : null
 );
+
 
 function ehVazio(element) {
   if (element == "") {
@@ -15,19 +16,20 @@ function ehVazio(element) {
   }
 }
 
-function validarCadastro() {
+function validarCadastroGrupo() {
+  console.log("entou em validar cadastro");
   const plataforma = FORM.querySelector(".clPlataforma").value;
   const numeroVagas = FORM.querySelector(".clNumeroVagas").value;
   const valorAssinatura = FORM.querySelector(".valorAssinatura").value;
   let bolArray = [];
 
   if (ehVazio(plataforma)) {
-    const parentDiv = form.querySelector(".clPlataforma").parentNode;
+    const parentDiv = FORM.querySelector(".clPlataforma").parentNode;
     const aviso = parentDiv.querySelector(".aviso");
     aviso.innerHTML = `Selecione uma plataforma.`
     bolArray.push(false)
   } else {
-    const parentDiv = form.querySelector(".clPlataforma").parentNode;
+    const parentDiv = FORM.querySelector(".clPlataforma").parentNode;
     const aviso = parentDiv.querySelector(".aviso");
     aviso.innerHTML = ``
     bolArray.push(true)
@@ -59,28 +61,33 @@ function validarCadastro() {
 
   //retorna true se todos passar em todas as validações.
   if (bolArray.every((bol) => bol === true)) {
+    console.log("entrou no if");
     const dados = {
       plataforma: plataforma,
       numeroVagas: numeroVagas,
       valorAssinatura: valorAssinatura,
+      idUser: localStorage.getItem("userId")
     };
     cadastrarGrupo(dados)
   }
 }
 
 async function cadastrarGrupo(dados) {
+  console.log("chamou cadastrar grupo");
   var options = {
     method: "POST",
     body: JSON.stringify(dados),
     headers: { "Content-Type": "application/json" },
   };
-
-  var resposta = await fetch("http://localhost:3000/usuario", options);
+  try{
+    var resposta = await fetch("http://localhost:3000/grupo", options);
+    alert("Grupo criado com sucesso!!!");
+  }catch(err){
+    console.log(err);
+  }
   console.log(await resposta.json());
-  redirect()
 }
 
 function redirect() {
-  alert("Grupo criado com sucesso!!!");
   window.location.href = "meusGrupos.html";
 }
