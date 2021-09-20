@@ -1,9 +1,8 @@
 const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
-const selectUser = require("../server/controlers/UserControler");
-const insertUser = require("../server/controlers/UserControler");
-const getUsers = require("../server/controlers/UserControler");
+const userControler = require("../server/controlers/UserControler");
+
 const DB_URI =
   "mongodb+srv://leonardo_guzi:web123@flexflix.hf0tt.mongodb.net/flexFlix?retryWrites=true&w=majority";
 
@@ -37,11 +36,12 @@ app.post("/usuario", (req, res) => {
   }
 });
 
-app.get("/usuario/:id", (req, res) => {
-  selectUser(req.params.id).then((r) => res.json(r));
+app.get("/usuario/:id", async function (req, res) {
+  const user = await userControler.selectUser(req.params.id);
+  res.json(user[0]);
 });
 
 app.get("/usuarios/", async function (req, res) {
-  const users = await getUsers();
+  const users = await userControler.getUsers();
   res.json(users);
 });
