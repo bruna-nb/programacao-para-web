@@ -6,6 +6,7 @@ const groupControler = require("../server/controlers/GrupoControler")
 
 const DB_URI =
   "mongodb+srv://leonardo_guzi:web123@flexflix.hf0tt.mongodb.net/flexFlix?retryWrites=true&w=majority";
+const grupoSchema = require("./grupoSchema.js")
 
 const app = express();
 app.use(express.json());
