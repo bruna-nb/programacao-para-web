@@ -79,12 +79,7 @@ async function cadastrarGrupo(dados) {
     body: JSON.stringify(dados),
     headers: { "Content-Type": "application/json" },
   };
-  try{
-    var resposta = await fetch("http://localhost:3000/grupo", options);
-    alert("Grupo criado com sucesso!!!");
-  }catch(err){
-    console.log(err);
-  }
+  var resposta = await fetch("http://localhost:3000/grupo", options);
   console.log(await resposta.json());
 }
 

@@ -62,7 +62,7 @@ app.post("/grupo", async function(req, res){
     let novoGrupo = await groupControler.insertGrupo(grupo);
     console.log(novoGrupo);
     inserirNovoGrupoNoUser(novoGrupo, criador)
-    res.send({"status": 200, "idGrupo": novoGrupo._id})
+    res.send({"status": 201, "idGrupo": novoGrupo._id})
   }catch(err){
     console.log(err);
     res.send({"status": 500, "err": "Não foi possível criar o grupo"})
